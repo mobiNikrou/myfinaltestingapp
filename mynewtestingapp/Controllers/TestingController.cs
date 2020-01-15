@@ -39,14 +39,14 @@ namespace mynewtestingapp.Controllers
                             {
                                 case "AcceptanceTest":
                                     string[] testrepo = Testobj.TestAction();
-                                    IList<TestingResultModel> studentList = new List<TestingResultModel>();
+                                    IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
                                     for (int i = 0; i < testrepo.Length; i++)
                                     {
 
-                                        studentList.Add(new TestingResultModel() {ApplicatioName = testrepo[i] });
+                                        testindexlist.Add(new TestingResultModel() {ApplicatioName = testrepo[i] });
 
                                     }
-                                    ViewData["students"] = studentList;
+                                    ViewData["testindexlist"] = testindexlist;
                                     return View("TestResult");
   
                             }
