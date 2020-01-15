@@ -4,36 +4,21 @@
     ViewBag.Title = "View";
 }
 
-<h2>View</h2>
+<h1 class="display-4 my-4">Test Result</h1>
+<div class="row">
+    <ul class="list-group col-6">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+    <ul class="list-group col-6 ">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Test Indexs</th>
-            <th scope="col">Yes/No</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td scope="col">
-            dasdsadsadsadasd
-        </td>
-    </tr>
-        <tr>
-            <td scope="col">
-                dasdsadasdsadsadsadasd
-            </td>
-        </tr>
-
-    @foreach (var std in ViewData["students"] as IList<TestingResultModel>)
-    {
-        <tr>
-            <td scope="col">
+        @foreach (var std in ViewData["students"] as IList<TestingResultModel>)
+        {
+            <li class="list-group-item ">
                 @std.ApplicatioName
-            </td>
-        </tr>
-    }
+            </li>
+        }
 
-
-    </tbody>
-    </table>
+    </ul>
+</div>
