@@ -1,0 +1,40 @@
+﻿@using System.Web.UI.WebControls
+@using mynewtestingapp.Models
+@model mynewtestingapp.Models.TestingModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul>
+
+
+<h2 class="mt-5">Testing Form</h2>
+<h6 class="mb-4">Set The Required Parameters And Click On "RunTest" Button.</h6>
+@using (Html.BeginForm("HandelForm", "Testing", FormMethod.Post, new { @class = "form-group" }))
+{
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    @Html.LabelFor(model => model.ProjectName)
+                    @Html.EnumDropDownListFor(model => model.ProjectName, "Select Project Name", new {@class = "form-control"})
+                </div>
+                <div class="col-4">
+                    @Html.LabelFor(model => model.ApplicatioName)
+                    @Html.EnumDropDownListFor(model => model.ApplicatioName, "Select Application", new {@class = "form-control"})
+                </div>
+                <div class="col-4">
+                    @Html.LabelFor(model => model.TestType)
+                    @Html.EnumDropDownListFor(model => model.TestType, "Select Test Type", new {@class = "form-control"})
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary float-right">RunTest</button>
+        </div>
+    </div>
+}
+        
+        
+     
