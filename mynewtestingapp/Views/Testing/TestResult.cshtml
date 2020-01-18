@@ -16,13 +16,13 @@
         @foreach (var std in ViewData["testindexlist"] as IList<TestingResultModel>)
         {
             <li class="list-group-item ">
-                @std.ApplicatioName
+                @std.TestCheck1
             </li>
             <li class="list-group-item ">
-                @std.ProjectName
+                @std.TestCheck2
             </li>
             <li class="list-group-item ">
-                @std.TestType
+                @std.TestCheck3
             </li>
         }
 

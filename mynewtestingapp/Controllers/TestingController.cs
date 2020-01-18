@@ -14,9 +14,9 @@ namespace mynewtestingapp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            IList<TestingResultModel> studentList = new List<TestingResultModel>();
-            studentList.Add(new TestingResultModel() { ApplicatioName = "Bill" });
-            ViewData["students"] = studentList;
+            IList<TestingResultModel> ResultList = new List<TestingResultModel>();
+            ResultList.Add(new TestingResultModel() { TestCheck1 = "Bill" });
+            ViewData["ResultLists"] = ResultList;
             return View();
         }
         // Post: Testing
@@ -38,9 +38,9 @@ namespace mynewtestingapp.Controllers
                             switch (TestType)
                             {
                                 case "AcceptanceTest":
-                                    string[] testrepo = Testobj.TestAction();
+                                    string[] testrepo = Testobj.TestAction1();
                                     IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
-                                    testindexlist.Add(new TestingResultModel() {ApplicatioName = testrepo[0], ProjectName = testrepo[1], TestType = testrepo[2] });
+                                    testindexlist.Add(new TestingResultModel() { TestCheck1 = testrepo[0], TestCheck2 = testrepo[1], TestCheck3 = testrepo[2] });
 
                                     ViewData["testindexlist"] = testindexlist;
                                     return View("TestResult");

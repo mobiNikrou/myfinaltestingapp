@@ -20,12 +20,12 @@ namespace mynewtestingapp.Models
     public class TestingResultModel
 
     {
-        [Display(Name = "Project Name")]
-        public string ProjectName { get; set; }
-        [Display(Name = "Application Name")]
-        public string ApplicatioName { get; set; }
-        [Display(Name = "Test Type")]
-        public string TestType { get; set; }
+        [Display(Name = "TestCheck1")]
+        public string TestCheck1 { get; set; }
+        [Display(Name = "TestCheck2")]
+        public string TestCheck2 { get; set; }
+        [Display(Name = "TestCheck3")]
+        public string TestCheck3 { get; set; }
     }
     public enum ProjectNames
     {
