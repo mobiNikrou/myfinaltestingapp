@@ -40,12 +40,8 @@ namespace mynewtestingapp.Controllers
                                 case "AcceptanceTest":
                                     string[] testrepo = Testobj.TestAction();
                                     IList<TestingResultModel> testindexlist = new List<TestingResultModel>();
-                                    for (int i = 0; i < testrepo.Length; i++)
-                                    {
+                                    testindexlist.Add(new TestingResultModel() {ApplicatioName = testrepo[0], ProjectName = testrepo[1], TestType = testrepo[2] });
 
-                                        testindexlist.Add(new TestingResultModel() {ApplicatioName = testrepo[i] });
-
-                                    }
                                     ViewData["testindexlist"] = testindexlist;
                                     return View("TestResult");
   
